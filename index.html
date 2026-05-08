@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aril Kumar | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Aril Kumar.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300..800&family=Bricolage+Grotesque:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <nav class="navbar">
+        <div class="nav-brand">AK.</div>
+        <ul class="nav-links">
+            <li><a href="#" data-target="home" data-scroll="about-section" class="nav-item">About</a></li>
+            <li><a href="#" data-target="home" data-scroll="skills-section" class="nav-item">Skills</a></li>
+            <li><a href="#" data-target="home" data-scroll="resume-section" class="nav-item">Experience</a></li>
+            <li><a href="#" data-target="home" data-scroll="projects-section" class="nav-item">Projects</a></li>
+            <li><a href="#" data-target="home" data-scroll="education-section" class="nav-item">Education</a></li>
+            <li><a href="#" data-target="contact" class="nav-item">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    style="display:none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- HOME VIEW -->
+        <div id="home" class="page-view active-view">
+            <section class="hero">
+                <div class="hero-content">
+                    <h2 class="greeting">Hi, I'm</h2>
+                    <h1 class="title">Aril Kumar</h1>
+                    <h3 class="subtitle">Turning Data Into <span style="color: var(--accent);">Decisions</span>.
+                        Insights Into <span style="color: var(--accent);">Impact</span>.</h3>
+                    <p class="description">Data Analytics graduate with experience in financial planning, business
+                        intelligence, and applied analytics at Mercedes-Benz,
+                        building dashboards, uncovering trends, and transforming complex data into actionable insights
+                        through Power BI, Python, SQL, and analytics storytelling.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="primary-btn connect-btn nav-item"
+                            style="background-color: var(--accent); color: white; border-color: var(--accent);"
+                            data-target="contact">Let's Connect</button>
+                        <a href="#" class="primary-btn download-btn" style="white-space: nowrap;">View Resume</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about-section" class="about">
+                <h3 class="section-title">About Me</h3>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I’m a data analyst passionate about turning messy, complex data into clear
+                            insights that drive smarter decisions. I explore the intersection of data,
+                            strategy, and storytelling. With prior experience at <span
+                                style="color: var(--accent); font-weight: 500;">Mercedes-Benz Parts Logistics
+                                APAC</span>, I’ve worked across <span
+                                style="color: var(--accent); font-weight: 500;">financial analytics</span>, <span
+                                style="color: var(--accent); font-weight: 500;">KPI reporting</span>, and <span
+                                style="color: var(--accent); font-weight: 500;">dashboard
+                                development</span> to support <span
+                                style="color: var(--accent); font-weight: 500;">business planning</span> and
+                            performance.
+                            <br><br>
+                            When I’m not buried in SQL queries and databases, I’m usually busy overanalyzing <span
+                                style="color: var(--accent); font-weight: 500;">movies</span>,
+                            writing <span style="color: var(--accent); font-weight: 500;">poetry</span> nobody will
+                            read, <span style="color: var(--accent); font-weight: 500;">building LEGO sets</span> like
+                            architectural blueprints, or
+                            deep-diving into oddly specific <span
+                                style="color: var(--accent); font-weight: 500;">history</span> and <span
+                                style="color: var(--accent); font-weight: 500;">geography</span> rabbit holes at 2AM.
+                            <br><br>
+                            Curiosity fuels both my technical and creative side — whether it’s finding patterns in data
+                            or memorizing obscure world facts for absolutely no reason.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="stat-cards-container">
+                    <div class="stat-card">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                        <h4 class="stat-number">5</h4>
+                        <p class="stat-label">Projects</p>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="7"></circle>
+                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                        </svg>
+                        <h4 class="stat-number">6</h4>
+                        <p class="stat-label">Certifications</p>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <h4 class="stat-number">9+</h4>
+                        <p class="stat-label">Months Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="12" x="3" y="8" rx="1"></rect>
+                            <path d="M10 8V5c0-.6-.4-1-1-1H6a1 1 0 0 0-1 1v3"></path>
+                            <path d="M19 8V5c0-.6-.4-1-1-1h-3a1 1 0 0 0-1 1v3"></path>
+                        </svg>
+                        <h4 class="stat-number">167</h4>
+                        <p class="stat-label">Hours building Lego</p>
+                    </div>
+                    <div class="stat-card">
+                        <svg class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                            <line x1="4" y1="22" x2="4" y2="15"></line>
+                        </svg>
+                        <h4 class="stat-number">254</h4>
+                        <p class="stat-label" style="margin-bottom: 0; white-space: nowrap;">Country flags memorized</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills-section" class="skills">
+                <h3 class="section-title">Skills</h3>
+                <div class="skills-wrapper">
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Programming & Scripting</h4>
+                        <div class="skills-container">
+                            <div class="skill-tag">Python</div>
+                            <div class="skill-tag">SQL</div>
+                            <div class="skill-tag">R Programming</div>
+                            <div class="skill-tag">HTML & CSS</div>
+                            <div class="skill-tag">JavaScript</div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Analytics & Visualization</h4>
+                        <div class="skills-container">
+                            <div class="skill-tag">Power BI</div>
+                            <div class="skill-tag">Tableau</div>
+                            <div class="skill-tag">Excel (VBA Macros & Automation)</div>
+                            <div class="skill-tag">SAS Enterprise Miner</div>
+                            <div class="skill-tag">Microsoft Office</div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Data Science</h4>
+                        <div class="skills-container">
+                            <div class="skill-tag">Machine Learning</div>
+                            <div class="skill-tag">NLP</div>
+                            <div class="skill-tag">Statistical Analysis</div>
+                            <div class="skill-tag">Database Management</div>
+                            <div class="skill-tag">Data Visualization</div>
+                            <div class="skill-tag">Data Mining</div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="skill-category-title">Soft Skills</h4>
+                        <div class="skills-container">
+                            <div class="skill-tag">Attention to Detail</div>
+                            <div class="skill-tag">Problem Solving</div>
+                            <div class="skill-tag">Critical Thinking</div>
+                            <div class="skill-tag">Business Strategy</div>
+                            <div class="skill-tag">Adaptability</div>
+                            <div class="skill-tag">Diligence</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume-section" class="resume-section" style="margin-top: 4rem;">
+                <div class="resume-header" style="align-items: center;">
+                    <h3 class="section-title" style="margin-bottom: 0; white-space: nowrap;">Experience</h3>
+                </div>
+
+                <div class="resume-content">
+                    <div class="resume-block">
+                        <div class="resume-item resume-card">
+                            <div class="resume-item-header">
+                                <h4>Controlling Analyst & CFO Support Intern</h4>
+                                <span class="date date-pill">Mar 2026 - Present</span>
+                            </div>
+                            <h5>Mercedes-Benz Parts Logistics APAC</h5>
+                            <ul class="edu-list" style="margin-top: 1rem;">
+                                <li>Assist the CFO in preparing executive-level financial summaries and strategic
+                                    performance reports for regional steering committees.</li>
+                                <li>Develop predictive forecasting dashboards in Power BI to monitor quarterly logistics
+                                    expenditures and identify cost-saving opportunities.</li>
+                                <li>Automate recurring data extraction workflows, significantly reducing manual
+                                    reporting time and improving data visibility.</li>
+                            </ul>
+                        </div>
+                        <div class="resume-item resume-card">
+                            <div class="resume-item-header">
+                                <h4>Data Analyst Intern</h4>
+                                <span class="date date-pill">Sep 2022 - Feb 2025</span>
+                            </div>
+                            <h5>Mercedes-Benz Parts Logistics APAC</h5>
+                            <ul class="edu-list" style="margin-top: 1rem;">
+                                <li>Conducted data extraction, transformation, and validation on previously unexplored
+                                    datasets, helping identify key areas for financial process improvement.</li>
+                                <li>Analyzed financial KPIs including revenue, expenses, pricing, and stock to support
+                                    ongoing planning cycles and improve visibility into financial performance.</li>
+                                <li>Identified patterns and trends in large-scale datasets, contributing to more
+                                    informed decision-making and enhanced reporting accuracy.</li>
+                                <li>Developed standard and custom Power BI dashboards to streamline revenue analysis,
+                                    budget tracking, and investment monitoring across departments.</li>
+                                <li>Generated ad-hoc reports to evaluate specific business requirements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects-section" class="projects" style="margin-top: 4rem;">
+                <h3 class="section-title">Projects</h3>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>Reddit Text Analysis & Classification</h4>
+                            <p>An interactive dashboard for analyzing and classifying Reddit comments using machine
+                                learning ensemble methods. Provides real-time classification of slang categories and
+                                visualizes linguistic trends from 2014-2024. <br><br>
+                                This project was developed alongside a comprehensive academic research investigating the
+                                evolution of internet linguistics and its greater impact on the cognitive and linguistic
+                                skills on Gen Alpha.</p>
+                            <div class="project-tech">
+                                <span>Python</span><span>Streamlit</span><span>Machine Learning</span><span>NLP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/arilstotle/fyp-reddit-slang-classification" target="_blank"
+                                    rel="noopener noreferrer">GitHub ↗</a>
+                                <a href="#" target="_blank" rel="noopener noreferrer">Research Paper ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-content">
+                            <h4>Portfolio Website</h4>
+                            <p>A responsive personal portfolio built with modern web technologies. Features a futuristic
+                                dark-mode aesthetic, dynamic CSS grid layouts, smooth hover animations, and an
+                                interactive bento-box design system.</p>
+                            <div class="project-tech">
+                                <span>HTML5</span><span>CSS3</span><span>Vanilla JS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+
+                </div>
+            </section>
+
+            <section id="education-section" class="education">
+                <h3 class="section-title">Education</h3>
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <div class="edu-title-wrapper">
+                            <h4 style="font-weight: 600;">Bachelor of Computer Science – Data Analytics
+                                (Hons)</h4>
+                            <h5>Asia Pacific University, Malaysia</h5>
+                            <br>
+                            <h5 style="color: var(--title-color); font-size: 0.95rem;"><strong>Grade:</strong> First
+                                Class Honours (CGPA:
+                                3.6 / 4.0)</h5>
+                        </div>
+                        <span class="edu-date date-pill">Nov 2022 - Mar 2026</span>
+                    </div>
+
+                    <div class="edu-details-grid" style="margin-top: -1rem;">
+                        <div class="edu-detail-box">
+                            <h6>Honours & Awards</h6>
+                            <ul class="edu-list">
+                                <li>Vice Chancellor's List for Academic Excellence</li>
+                                <li>International Students Scholarships & Merit Awards</li>
+                                <li>First Runner Up - APU Startup Weekend</li>
+                            </ul>
+                        </div>
+
+                        <div class="edu-detail-box">
+                            <h6>Clubs & Co-curriculars</h6>
+                            <ul class="edu-list">
+                                <li><strong>Vice President</strong> - APU No-Code Collective</li>
+                                <li><strong>Event Committee</strong> - APU Blockchain and Cryptocurrency Club</li>
+                                <li><strong>Volunteer</strong> - Kechara Soup Kitchen Society, <br>The Lost Food Project</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications-section" class="certifications"
+                style="margin-top: 1.5rem; padding-bottom: 2rem;">
+                <h3 class="section-title">External Certifications</h3>
+                <div class="certs-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Google Data Analytics Professional Certificate</h4>
+                            <span>Coursera</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z" />
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Google Data Analytics Specialization</h4>
+                            <span>Google</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <text x="12" y="16" font-size="12" font-family="sans-serif" font-weight="bold"
+                                    text-anchor="middle">SAS</text>
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>SAS Joint Professional Certificate in Data Analytics</h4>
+                            <span>SAS</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Introduction to Generative AI</h4>
+                            <span>Google Cloud Skills Boost</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M11.758 13.916c-1.196 0-2.16.945-2.16 2.11 0 1.164.964 2.109 2.16 2.109 1.192 0 2.16-.945 2.16-2.11 0-1.165-.968-2.11-2.16-2.11zm-5.467-2.62c-1.2 0-2.164.95-2.164 2.116s.964 2.113 2.164 2.113c1.196 0 2.16-.948 2.16-2.113 0-1.165-.964-2.115-2.16-2.115zM.825 8.68C.372 8.68 0 9.043 0 9.488v2.09c0 .445.372.808.825.808.457 0 .825-.363.825-.807v-2.09c0-.446-.368-.809-.825-.809zm22.348 0c-.452 0-.824.364-.824.809v2.09c0 .444.372.807.824.807.456 0 .827-.363.827-.807v-2.09c0-.445-.371-.809-.827-.809zM17.227 11.3c-1.2 0-2.165.947-2.165 2.114 0 1.165.965 2.111 2.165 2.111s2.16-.946 2.16-2.11c0-1.167-.96-2.115-2.16-2.115zm-5.47-8.318c-1.196 0-2.16.946-2.16 2.11 0 1.165.964 2.11 2.16 2.11 1.193 0 2.16-.945 2.16-2.11 0-1.164-.967-2.11-2.16-2.11zM6.29 5.602c-1.2 0-2.164.945-2.164 2.11 0 1.164.964 2.109 2.164 2.109 1.197 0 2.16-.945 2.16-2.11 0-1.164-.963-2.109-2.16-2.109zm10.938 0c-1.2 0-2.165.945-2.165 2.11 0 1.164.965 2.109 2.165 2.109s2.16-.945 2.16-2.11c0-1.164-.96-2.109-2.16-2.109z" />
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>CCNAv7: Introduction to Networks</h4>
+                            <span>Cisco</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div class="cert-info">
+                            <h4>Intercultural Awareness and Cultural Diversity</h4>
+                            <span>Erasmus Plus</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact-section-home" class="contact-section"
+                style="margin-top: 4rem; padding-bottom: 0; text-align: center;">
+                <h3 class="title" style="white-space: nowrap; margin-bottom: 1rem; font-size: 2.5rem;">Let's get in
+                    touch!</h3>
+                <p class="subtitle" style="font-size: 1.1rem; text-align: center; margin: 0 auto; max-width: 600px;">
+                    Whether you have an opportunity, a question, want to quiz me on geography, or just
+                    want to say hi, my inbox is always open.</p>
+
+                <div class="social-links-contact"
+                    style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 0; margin-top: 2rem;">
+                    <a href="mailto:arilkpanda@gmail.com" class="social-btn" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aril-kumar-panda/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/arilstotle" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- CONTACT VIEW -->
+        <div id="contact" class="page-view">
+            <section class="contact-section">
+                <h4 class="title" style="white-space: nowrap;">Let's get in touch!</h4>
+                <br>
+                <p class="subtitle">Whether you have an opportunity, a question, want to quiz me on geography, or just
+                    want to say hi, my inbox is always open.</p>
+
+                <div class="social-links-contact"
+                    style="display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2.5rem;">
+                    <a href="mailto:arilkpanda@gmail.com" class="social-btn" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aril-kumar-panda/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect width="4" height="12" x="2" y="9"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/arilstotle" target="_blank" rel="noopener noreferrer" class="social-btn"
+                        aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Winston Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="wsmith@orwell.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="What's 2+2?"></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn submit-btn">Send Message</button>
+                    <div id="form-status" class="form-status hidden">Message sent successfully!</div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>Designed & Built by Aril.</p>
+        <p>© 2026. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
