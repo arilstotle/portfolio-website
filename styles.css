@@ -758,7 +758,7 @@ section {
 }
 
 .resume-item-header .date {
-    font-family: monospace;
+    font-family: var(--font-heading);
     color: var(--text-muted);
     font-size: 0.9rem;
 }
@@ -936,13 +936,39 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
+        display: none;
+    }
+
+    .navbar.nav-open .nav-links {
         display: flex;
-        position: static;
-        transform: none;
-        gap: 1rem;
-        flex-wrap: wrap;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        background: var(--nav-bg);
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 5%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
         justify-content: center;
-        padding-top: 0.5rem;
+        background: transparent;
+        border: 1px solid var(--border-color);
+        padding: 0.45rem 0.6rem;
+        border-radius: 6px;
+        margin-right: 0.5rem;
+        cursor: pointer;
+        color: var(--text-main);
+    }
+
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
     }
 
     .title {
