@@ -939,38 +939,6 @@ footer {
         display: none;
     }
 
-    .navbar.nav-open .nav-links {
-        display: flex;
-        position: absolute;
-        top: var(--nav-height);
-        left: 0;
-        right: 0;
-        background: var(--nav-bg);
-        flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem 5%;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-    }
-
-    .nav-toggle {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: transparent;
-        border: 1px solid var(--border-color);
-        padding: 0.45rem 0.6rem;
-        border-radius: 6px;
-        margin-right: 0.5rem;
-        cursor: pointer;
-        color: var(--text-main);
-    }
-
-    .nav-actions {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
     .title {
         font-size: 40px;
     }

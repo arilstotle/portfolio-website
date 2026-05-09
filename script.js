@@ -66,27 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Navbar scroll effect and Progress Bar
     const navbar = document.querySelector('.navbar');
-    // Mobile nav toggle button behaviour
-    const navToggle = document.getElementById('nav-toggle');
-    if (navToggle) {
-        navToggle.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navbar.classList.toggle('nav-open');
-            const expanded = navbar.classList.contains('nav-open');
-            navToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
-        });
-    }
-
-    // Close mobile nav when a nav item is clicked
-    document.addEventListener('click', (e) => {
-        if (e.target.closest('.nav-item')) {
-            if (navbar.classList.contains('nav-open')) {
-                navbar.classList.remove('nav-open');
-                const nt = document.getElementById('nav-toggle');
-                if (nt) nt.setAttribute('aria-expanded', 'false');
-            }
-        }
-    });
     window.addEventListener('scroll', () => {
         // Navbar styling
         if (window.scrollY > 50) {
