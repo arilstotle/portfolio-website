@@ -835,6 +835,24 @@ section {
     border-color: var(--accent);
 }
 
+[data-theme="light"] .form-group input,
+[data-theme="light"] .form-group textarea {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(56, 189, 248, 0.2);
+    box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+[data-theme="light"] .form-group input:focus,
+[data-theme="light"] .form-group textarea:focus {
+    border-color: rgba(56, 189, 248, 0.5);
+    box-shadow: inset 0 1px 3px rgba(15, 23, 42, 0.05), 0 0 0 3px rgba(56, 189, 248, 0.1);
+}
+
+[data-theme="light"] .form-group input::placeholder,
+[data-theme="light"] .form-group textarea::placeholder {
+    color: rgba(71, 85, 105, 0.6);
+}
+
 .submit-btn {
     align-self: flex-start;
     margin-top: 1rem;
