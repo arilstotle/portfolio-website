@@ -97,30 +97,68 @@ document.addEventListener('DOMContentLoaded', () => {
     // Contact Form handling
     const contactForm = document.getElementById('contact-form');
     const formStatus = document.getElementById('form-status');
+    let statusTimeoutId = null;
 
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevent actual form submission
-            
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerText;
-            
-            // Simulate network request
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+
+            const payload = {
+                name: nameInput ? nameInput.value.trim() : '',
+                email: emailInput ? emailInput.value.trim() : '',
+                message: messageInput ? messageInput.value.trim() : '',
+                _subject: `New Portfolio Message from ${nameInput ? nameInput.value.trim() : 'Website Visitor'}`,
+                _template: 'table',
+                _captcha: 'false'
+            };
+
+            // Loading state
             submitBtn.innerText = 'Sending...';
             submitBtn.disabled = true;
+            if (statusTimeoutId) clearTimeout(statusTimeoutId);
+            formStatus.classList.add('hidden');
+            formStatus.classList.remove('error');
 
-            setTimeout(() => {
-                contactForm.reset();
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/arilkpanda@gmail.com', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (response.ok && (data.success === 'true' || data.success === true)) {
+                    contactForm.reset();
+                    formStatus.textContent = 'Message sent successfully! Thank you for reaching out.';
+                    formStatus.classList.remove('hidden', 'error');
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+            } catch (err) {
+                console.error('Contact form submission error:', err);
+                formStatus.textContent = 'Failed to send message. Please try again or email directly at arilkpanda@gmail.com';
+                formStatus.classList.add('error');
+                formStatus.classList.remove('hidden');
+            } finally {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
-                
-                formStatus.classList.remove('hidden');
-                
-                // Hide status message after 3 seconds
-                setTimeout(() => {
+
+                // Hide status message after 5 seconds
+                statusTimeoutId = setTimeout(() => {
                     formStatus.classList.add('hidden');
-                }, 3000);
-            }, 1000);
+                }, 5000);
+            }
         });
     }
 
