@@ -126,6 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
             formStatus.classList.add('hidden');
             formStatus.classList.remove('error');
 
+            if (window.location.protocol === 'file:') {
+                formStatus.textContent = 'Form submissions require a web server (such as GitHub Pages or a local server) and do not work when opening HTML files directly from your computer (file://).';
+                formStatus.classList.add('error');
+                formStatus.classList.remove('hidden');
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                return;
+            }
+
             try {
                 const response = await fetch('https://formsubmit.co/ajax/arilkpanda@gmail.com', {
                     method: 'POST',
@@ -142,22 +151,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     contactForm.reset();
                     formStatus.textContent = 'Message sent successfully! Thank you for reaching out.';
                     formStatus.classList.remove('hidden', 'error');
+                } else if (data.message && data.message.toLowerCase().includes('activation')) {
+                    formStatus.textContent = 'Action Required: An activation email was sent to arilkpanda@gmail.com. Please check your Inbox and Spam folder and click "Activate Form".';
+                    formStatus.classList.remove('hidden', 'error');
                 } else {
                     throw new Error(data.message || 'Submission failed');
                 }
             } catch (err) {
                 console.error('Contact form submission error:', err);
-                formStatus.textContent = 'Failed to send message. Please try again or email directly at arilkpanda@gmail.com';
+                formStatus.textContent = err.message || 'Failed to send message. Please try again or email directly at arilkpanda@gmail.com';
                 formStatus.classList.add('error');
                 formStatus.classList.remove('hidden');
             } finally {
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
 
-                // Hide status message after 5 seconds
+                // Hide status message after 7 seconds
                 statusTimeoutId = setTimeout(() => {
                     formStatus.classList.add('hidden');
-                }, 5000);
+                }, 7000);
             }
         });
     }
